@@ -9,16 +9,11 @@ import java.sql.SQLException;
 
 public class Util {
 
-    private static Connection connection;
-
-    public Util() {
+    private Util() {
     }
 
-    /*   private static final String URL = "jdbc:mysql://localhost:3306/mysql";
-    private static final String USERNAME = "root";
-    private static final String PASSWORD = "root";*/
-
     public static Connection getConnection() throws SQLException {
+        Connection connection = null;
         try {
             Driver driver = new com.mysql.cj.jdbc.Driver();
             DriverManager.registerDriver(driver);
